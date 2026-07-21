@@ -4,113 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nested HTML Tables</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        table {
-            border-collapse: ;
-            width: 100%;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-
-        th,
-        td {
-            padding: 8px;
-            vertical-align: top;
-            text-align: left;
-        }
-
-        .nested {
-            width: 100%;
-        }
-
-        .black-cell {
-            background-color: black;
-            color: white;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+    
 </head>
 <body>
+	<table border>
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<th colspan="2">Nested Table2</th>
+					</tr>
+					<tr>
+						<th>Column1</th>
+						<th>Column2</th>
+					</tr>
+					<tr>
+						<td>abc</td>
+						<td>def</td>
+					</tr>
+					
+				</table>
+				
+			</td>
+			<td>
+				<table>
+					<tr>
+						<th colspan="2">Nested Table1</th>
+					</tr>
+					<tr>
+						<td colspan="2" rowspan="3">
+							<ul>
+								<li>List item</li>
+								<li>List item</li>
+								<li>List item</li>
+							</ul>							
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<table>
+				<tr>
+					<th colspan="2">Nested Table3</th>
+				</tr>
+				<tr>
+					<td>
+						Nested Table
+					</td>
+					<td>Demo Continued</td>
+				</tr>
+			</table>
+			</td>
+			<td>
+				<table>
+					<tr>
+						<th colspan="2">Nested Table 4</th>
+					</tr>
+					<tr>
+						<td id="black" colspan="2">HTML</td>
+					</tr>
+					
+				</table>
+			</td>
+		</tr>
+		
 
-<table>
-    <tr>
-        <!-- Nested Table 1 -->
-        <td>
-            <table class="nested">
-                <tr>
-                    <th>Nested Table 1</th>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                </tr>
-            </table>
-        </td>
 
-        <!-- Nested Table 2 -->
-        <td>
-            <table class="nested">
-                <tr>
-                    <th colspan="2">Nested Table 2</th>
-                </tr>
-                <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                </tr>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
+		
+	</table>
 
-    <tr>
-        <!-- Nested Table 3 -->
-        <td>
-            <table class="nested">
-                <tr>
-                    <th>Nested Table 3</th>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>List item 1</li>
-                            <li>List item 2</li>
-                            <li>List item 3</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-        </td>
-
-        <!-- Nested Table 4 -->
-        <td>
-            <table class="nested">
-                <tr>
-                    <th>Nested Table 4</th>
-                </tr>
-                <tr>
-                    <td class="black-cell">HTML</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
 
 </body>
 </html>
